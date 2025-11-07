@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Resume Website - Capstone Project 4" />
+  <title>Resume | Capstone Project 4</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      background-color: #f5f7fa;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <h4 class="text-center fw-bold">23CS2049 – Web Technology Lab – 2025</h4>
+    <h5 class="text-center">URK23CS1285</h5>
+    <h6 class="text-center mb-4">Ex. 10 | Capstone Project 4 – Resume Website</h6>
+
+    <div class="card shadow-lg p-4">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img src="https://via.placeholder.com/150" class="profile-img rounded-circle mb-3" alt="Profile Picture">
+          <h3 id="name">Priya Boya</h3>
+          <p id="role">Web Developer | Designer</p>
+          <button class="btn btn-primary mt-2" onclick="editProfile()">Edit Profile</button>
+        </div>
+        <div class="col-md-8">
+          <h4>About Me</h4>
+          <p id="about">I am a passionate web developer skilled in creating interactive and responsive websites using modern technologies.</p>
+
+          <h4>Skills</h4>
+          <ul id="skills">
+            <li>HTML, CSS, JavaScript</li>
+            <li>React.js, Node.js</li>
+            <li>MySQL, MongoDB</li>
+          </ul>
+
+          <h4>Projects</h4>
+          <ul id="projects">
+            <li>Restaurant Management System</li>
+            <li>Smart Parking Management System</li>
+            <li>Carbon Footprint Tracker</li>
+          </ul>
+
+          <h4>Contact</h4>
+          <p>Email: <span id="email">priya@example.com</span></p>
+          <p>Phone: <span id="phone">+91 9876543210</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button class="btn btn-success" onclick="showAdminPanel()">Open Admin Panel</button>
+    </div>
+
+    <div id="adminPanel" class="admin-panel mt-4 p-4 shadow-lg">
+      <h4>Admin Panel</h4>
+      <p>Update Resume Details:</p>
+      <form id="updateForm">
+        <div class="mb-2">
+          <label for="nameInput" class="form-label">Name</label>
+          <input type="text" id="nameInput" class="form-control" placeholder="Enter new name">
+        </div>
+        <div class="mb-2">
+          <label for="aboutInput" class="form-label">About</label>
+          <textarea id="aboutInput" class="form-control" placeholder="Enter new about info"></textarea>
+        </div>
+        <div class="mb-2">
+          <label for="emailInput" class="form-label">Email</label>
+          <input type="email" id="emailInput" class="form-control" placeholder="Enter new email">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="updateProfile()">Save Changes</button>
+        <button type="button" class="btn btn-secondary" onclick="closeAdminPanel()">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <script src="adminpanel.js"></script>
+</body>
+</html>
